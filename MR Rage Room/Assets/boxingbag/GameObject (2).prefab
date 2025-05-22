@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 1526909216078235808}
   - component: {fileID: 3092471729819523914}
   - component: {fileID: 5020084443697525801}
-  - component: {fileID: 5102048678272684901}
+  - component: {fileID: 9117972410738354609}
   m_Layer: 0
   m_Name: defaultMaterial.008
   m_TagString: Untagged
@@ -200,8 +200,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5102048678272684901
-MeshCollider:
+--- !u!136 &9117972410738354609
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -218,10 +218,11 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3693094258236636249, guid: e3044fe73d2716244bf20e89045914da, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Height: 1.34
+  m_Direction: 2
+  m_Center: {x: 0.000888288, y: 0.00000003725289, z: 0.776001}
 --- !u!1 &1334220881311659178
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,7 +808,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5041224827367788435}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 200
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -823,9 +824,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!145 &8973399369096708111
 SpringJoint:
   m_ObjectHideFlags: 0
@@ -837,10 +838,10 @@ SpringJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: -1.97, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0, y: -0.003000021, z: 0.002}
   serializedVersion: 2
-  m_Spring: 1000
-  m_Damper: 500
+  m_Spring: 5000
+  m_Damper: 8000
   m_MinDistance: 0
   m_MaxDistance: 0.01
   m_Tolerance: 0.025
@@ -848,8 +849,8 @@ SpringJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 1
   m_EnablePreprocessing: 1
-  m_MassScale: 100
-  m_ConnectedMassScale: 1
+  m_MassScale: 200
+  m_ConnectedMassScale: 10
 --- !u!1 &5070560132212777693
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,7 +982,7 @@ Transform:
   m_GameObject: {fileID: 6206581785971331802}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00016661221, y: 0.36400008, z: -0.004}
+  m_LocalPosition: {x: 0.00016661221, y: 0.957, z: -0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -995,7 +996,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6206581785971331802}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1009,11 +1010,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 126
+  m_CollisionDetection: 3
 --- !u!1 &7198455738770057907
 GameObject:
   m_ObjectHideFlags: 0
